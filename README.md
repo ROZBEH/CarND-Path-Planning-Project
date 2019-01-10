@@ -54,7 +54,6 @@ IV. Here I try to talk about some of the important variables that were used in t
 <img src="img/ego-front.png" width = "300" />
 </p>
 </br>
-</br>
 ```cpp
   default_random_engine gen;
   normal_distribution<double> dist_x(0, std_pos[0]);
