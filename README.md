@@ -44,15 +44,15 @@ IV. Here I try to talk about some of the important variables that were used in t
 </br>
 
 - ```too_close``` is a boolean variable that becomes true whenever there is a another vehicle too close in front of ego vehicle. This variable becomes false whenever we pass the front vehicle or the distance becomes higher than 30 meter threshold.
-
 </br>
+
 - ```turn_right``` and ```turn_left``` are two variables that determine whether it is safe to pass the front vehicle and move to the left/right lane. The condition for passing the front vehicle is that there must not be any other vehicle in the 50 meter front and 7 meter behind of the ego vehicle in the adjacent left/right lane.
 </br>
+
 - ```right_side``` and ```left_side``` are two interesting variables. Imagine that the ego vehicle is stuck in the following scenario:
 <p align="center">
 <img src="img/ego-front.png" width = "300" />
 </p>
-
 </br>
 </br>
 ```cpp
