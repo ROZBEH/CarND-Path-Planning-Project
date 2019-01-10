@@ -203,7 +203,7 @@ int main() {
   int lane = 1;
   // reference velocity to target
   double ref_vel = 5;//mph
-
+  // This variable keep track of whether we can pass the front vehicle or not.
   bool frontPass = true;
 
   h.onMessage([&ref_vel, &frontPass,&map_waypoints_x,&map_waypoints_y,&map_waypoints_s,&map_waypoints_dx,&map_waypoints_dy,&lane](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,

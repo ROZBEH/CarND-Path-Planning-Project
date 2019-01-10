@@ -35,10 +35,12 @@ II. The ```main.cpp``` is the main code that contains algorithms and development
 
 </br>
 
-III. Maryam!
+III. In order to avoid the jerk when the vehicle starts, ```ref_vel``` is set to 5 miles per hour and we gradually increases to the speed limit 49.9 miles per hour.
 
 
-IV. During the prediction stage, we estimate the location (x, y, theta) of the vehicle based on the current measurements (velocity and yaw rate!)
+IV. Here I try to talk about some of the important variables that were used in the code.
+
+
 </br>
 ```cpp
   default_random_engine gen;
