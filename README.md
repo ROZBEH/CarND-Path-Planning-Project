@@ -64,7 +64,7 @@ IV. During the prediction stage, we estimate the location (x, y, theta) of the v
 </br>
 
 
-V. Final video of the result is provided below. Please click on the following image to view the full video on YouTube. 
+V. Click on the following imahe in order to watch final video of car going around the whole track without violating any of the rules. 
 </br>
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FRMAPzO9M08/0.jpg)](https://youtu.be/FRMAPzO9M08)
