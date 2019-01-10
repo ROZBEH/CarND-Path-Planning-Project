@@ -39,8 +39,7 @@ III. In order to avoid the jerk when the vehicle starts, ```ref_vel``` is set to
 
 
 IV. Here I try to talk about some of the important variables that were used in the code.
-
--```frontPass``` is a boolean variable that is always true unless there is another vehicle in too close in front of us. This variable remains false until we pass the vehicle in front of us. Even if the vehicle in front of is too close initially and then distances itself more than limit, ```frontPass``` remains false. This variable becomes true once we pass the vehicle in front of ego vehicle.
+- ```frontPass``` is a boolean variable that is always true unless there is another vehicle in too close in front of us. This variable remains false until we pass the vehicle in front of us. Even if the vehicle in front of is too close initially and then distances itself more than limit, ```frontPass``` remains false. This variable becomes true once we pass the vehicle in front of ego vehicle.
 
 - ```too_close``` is a boolean variable that becomes true whenever there is a another vehicle too close in front of ego vehicle. This variable becomes false whenever we pass the front vehicle or the distance becomes higher than 30 meter threshold.
 
