@@ -13,7 +13,7 @@ Overview
 ---
 
 
-In this project we are going to use Particle Filter for the localization of self driving car.
+In this project vehicle drives in a simulation environment autonomously without human intervention. The fundamental code block used in this project is based on Path Planning Course at Udacity Self Driving Cars online course.
 
 
 Pipeline
