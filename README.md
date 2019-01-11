@@ -46,33 +46,8 @@ IV. Here I try to talk about some of the important variables that were used in t
 - ```turn_right``` and ```turn_left``` are two variables that determine whether it is safe to pass the front vehicle and move to the left/right lane. The condition for passing the front vehicle is that there must not be any other vehicle in the 50 meter front and 7 meter behind of the ego vehicle in the adjacent left/right lane.
 
 - ```right_side``` and ```left_side``` are two interesting variables. Suppose that the ego vehicle is stuck in the following scenario. The blue circle is the ego vehicle. As you can see, all three lanes are occupied by other vehicle. As a result it does not make much difference which lane to be. However, it makes more sense to be in the center lane since the car will have more option in future in case other lanes become open for passing. These two variables remain true if it is safe for the car to move into the center lane. Ego vehicle does not necessarily pass the front vehicle, it just moves to the center lane. 
-<p align="center">
-<img src="img/ego-front.png" width = "300" />
-</p>
-</br>
-```cpp
-  default_random_engine gen;
-  normal_distribution<double> dist_x(0, std_pos[0]);
-    normal_distribution<double> dist_y(0, std_pos[1]);
-    normal_distribution<double> dist_theta(0, std_pos[2]);
-  for (int i = 0; i<num_particles;++i) 
-      {
-        
-      if (fabs(yaw_rate) < 0.00001){
-        particles[i].x += dist_x(gen) + velocity * delta_t*cos(particles[i].theta);
-        particles[i].y += dist_y(gen) + velocity * delta_t*sin(particles[i].theta);
-        particles[i].theta += dist_theta(gen);
-      } else{
-        particles[i].x += dist_x(gen) + (velocity/yaw_rate)*(sin(particles[i].theta+yaw_rate*delta_t)-sin(particles[i].theta));
-        particles[i].y += dist_y(gen) + (velocity/yaw_rate)*(cos(particles[i].theta)-cos(particles[i].theta+yaw_rate*delta_t));
-        particles[i].theta += dist_theta(gen) + yaw_rate*delta_t;
-          }
-      }
-```
-</br>
 
-</br>
-
+- ```margine_left``` ```margine_center``` ```margine_right``` are three variables that try to keep the car in a lane with the most free space in front of the car so that the ego vehicle does not has to change lane too frequently. For example if the car is in lane 2 and margine in lane 1 is greater than margine in lane 2 then the car moves to lane 1. 
 
 V. Click on the following imahe in order to watch final video of car going around the whole track without violating any of the rules. 
 </br>
